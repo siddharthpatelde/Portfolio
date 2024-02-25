@@ -448,5 +448,41 @@ h6 { font-size: 16px;}
 
 }
 
+button {
+	background-color: #aaa;
+	border: none;
+	border-radius: 24px;
+	box-shadow: 0 2px 0 #888, 1px 4px 2px rgba(0,0,0,0.2);
+	color: white;
+	display: block;
+	font-family: sans-serif;
+	font-size: .85em;
+	font-weight: 300;
+	outline: none;
+	padding: 1em 0;
+	position: relative;
+	overflow: hidden;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	width: 100%;
+  }
 
+  button[data-sharer="email"] {
+	background-color: #444;
+	box-shadow: 0 2px 0 #222, 1px 4px 2px rgba(0,0,0,0.2);
+  }  
 
+  button[data-sharer="whatsapp"] {
+	background-color: #4DC247;
+	box-shadow: 0 2px 0 #30AF29, 1px 4px 2px rgba(0,0,0,0.2);
+  }
+
+  button[data-sharer="linkedin"] {
+	background-color: #007AB5;
+	box-shadow: 0 2px 0 #005E8C, 1px 4px 2px rgba(0,0,0,0.2);
+  }
+
+  button:hover {
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+	transform: scale(1.1);
+}
