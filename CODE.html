@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Siddharth Patel</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href=".\images\website_Logo.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="prism.css">
+
+</head>
+<body>
+    
+
+	
+	<section class="s2">
+		
+		<h3 style="text-align: center;">Share my website</h3>
+
+		<div class="main-container">
+			
+			<pre>
+				<code class ="language-C">
+				const int SpeedPin = 3;
+				const int DirectionPin = 9;
+
+				void setup() {
+				pinMode(SpeedPin, OUTPUT);
+				pinMode(DirectionPin, OUTPUT);
+
+				TCCR2B = TCCR2B & 0b11111000 | 0x01;
+				TCCR1B = TCCR2B & 0b11111000 | 0x01;
+				}
+
+				void runMotorClockwise(int speedPercentage, int durationSeconds) {
+				int SpeedDutyCycle = map(speedPercentage, 0, 100, 0, 255);
+				analogWrite(SpeedPin, SpeedDutyCycle);
+				digitalWrite(DirectionPin, LOW);  // Set direction to clockwise
+				delay(durationSeconds * 1000);  // Convert seconds to milliseconds
+				}
+
+				void stopMotor(int durationSeconds) {
+				analogWrite(SpeedPin, 0);  // Stop the motor
+				delay(durationSeconds * 1000);  // Convert seconds to milliseconds
+				}
+
+				void runMotorCounterClockwise(int speedPercentage, int durationSeconds) {
+				int SpeedDutyCycle = map(speedPercentage, 0, 100, 0, 255);
+				analogWrite(SpeedPin, SpeedDutyCycle);
+				digitalWrite(DirectionPin, HIGH);  // Set direction to counter-clockwise
+				delay(durationSeconds * 1000);  // Convert seconds to milliseconds
+				}
+
+				void loop() {
+
+				stopMotor(5);
+				// Run clockwise for 5 seconds
+				// runMotorClockwise(, 1);
+				// runMotorClockwise(40, 1);
+				// runMotorClockwise(50, 1);
+				// runMotorClockwise(60, 8);
+
+				//runMotorCounterClockwise(30, 2.9);
+				runMotorCounterClockwise(20, 2.9);
+				stopMotor(1);
+				runMotorClockwise(20, 1.5);
+				stopMotor(1);
+				runMotorCounterClockwise(20, 2.9);
+
+				
+
+
+				// stopMotor(3);
+				}
+				</code>
+			</pre>
+
+		</div>
+	</section>
+    <script type="text/javascript" src="script.js"></script>
+	<script src="prism.js"></script>
+
+	
+</body>
+</html>
