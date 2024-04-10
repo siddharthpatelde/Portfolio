@@ -481,6 +481,11 @@ button {
 	box-shadow: 0 2px 0 #005E8C, 1px 4px 2px rgba(0,0,0,0.2);
   }
 
+  button[data-sharer="CV"] {
+	background-color: #9f1f1f;
+	box-shadow: 0 2px 0 #9b0808, 1px 4px 2px rgba(0,0,0,0.2);
+  }  
+
   button:hover {
 	text-decoration: none;
 	transition: all .2s ease-in-out;
