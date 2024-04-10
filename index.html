@@ -99,14 +99,6 @@
 						<li>Proficient in reading and understanding datasheets of various modules, sensors, and development boards.</li>
 					</ol>
 
-					<p><button class="button" data-sharer="CV" onclick="downloadCV()">Download CV</button></p>
-
-					<script>
-						function downloadCV() {
-							var cvUrl = "./images/CV - Siddharth Patel.pdf";
-							window.open(cvUrl, '_blank');
-						}
-					</script>
 					
 
 					<div id="skills">
@@ -146,7 +138,30 @@
 					<h3>Find me on GitHub</h3>
 
 					
-					<a target="_blank" href="https://github.com/siddharthpatelde">GitHub: @siddharthpatelde</a>
+
+
+					<p><button class="button" onclick="redirectToGitHub()">Find me on GitHub @siddharthpatelde</button></p>
+
+					<script>
+						function redirectToGitHub() {
+							var githubUrl = "https://github.com/siddharthpatelde"; // Replace "your-username" with your actual GitHub username
+							window.open(githubUrl, '_blank');
+						}
+					</script>
+
+					<p><button class="button" data-sharer="CV" onclick="downloadCV()">Download CV</button></p>
+
+					<script>
+						function downloadCV() {
+							var cvUrl = "./images/CV - Siddharth Patel.pdf";
+							window.open(cvUrl, '_blank');
+						}
+					</script> 
+
+
+
+
+
 				</div>
 			</div>
 
