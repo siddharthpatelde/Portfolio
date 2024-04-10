@@ -116,7 +116,7 @@
 						</ul>
 
 						<ul>
-							<li>LaTex</li>
+							<li>LaTeX</li>
 							<li>Control System</li>
 							<li>System Design</li>
 							<li>Teaching Maths/Physics</li>
@@ -138,16 +138,8 @@
 					<h3>Find me on GitHub</h3>
 
 					
+					<a target="_blank" href="https://github.com/siddharthpatelde">GitHub: @siddharthpatelde</a>
 
-
-					<p><button class="button" onclick="redirectToGitHub()">Find me on GitHub @siddharthpatelde</button></p>
-
-					<script>
-						function redirectToGitHub() {
-							var githubUrl = "https://github.com/siddharthpatelde"; // Replace "your-username" with your actual GitHub username
-							window.open(githubUrl, '_blank');
-						}
-					</script>
 
 					<p><button class="button" data-sharer="CV" onclick="downloadCV()">Download CV</button></p>
 
@@ -157,6 +149,15 @@
 							window.open(cvUrl, '_blank');
 						}
 					</script> 
+
+					<p><button class="button" data-sharer="CV" onclick="downloadCV()">QR Code</button></p>
+
+					<script>
+						function downloadCV() {
+							var cvUrl = "./images/Website_QR_latex.pdf";
+							window.open(cvUrl, '_blank');
+						}
+					</script>
 
 
 
