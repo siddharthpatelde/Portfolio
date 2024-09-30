@@ -321,6 +321,7 @@ h6 { font-size: 16px;}
 }
 
 
+
 .post-wrapper{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 320px);
@@ -335,6 +336,19 @@ h6 { font-size: 16px;}
 	-moz-box-shadow: -2px 7px 42px -9px rgba(0,0,0,0.75);
 	box-shadow: -2px 7px 42px -9px rgba(0,0,0,0.75);
 }
+
+.video-post {
+	min-height: 500px; /* Adjust only this post's height */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .video-post video {
+	width: 100%; /* Full width for the video */
+	height: auto;
+  }
+  
 
 .thumbnail{
 	display: block;
@@ -494,3 +508,133 @@ button {
 	transform: scale(1.1);
 }
 
+/* The timeline (vertical line) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Timeline vertical ruler */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--borderColor); /* Adjusted variable */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; /* Centering the timeline line */
+}
+
+/* Container around the content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+
+/* Circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--secondaryColor); /* Use variable for color */
+    border: 4px solid var(--mainColor); /* Use variable for color */
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Left and right positioning */
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+    transform: translateX(-10px); /* Pulling the right container slightly to the left */
+}
+
+/* Positioning the dot for the left side */
+.left::after {
+    right: -35px; /* Adjust this value to position the dot closer to the center */
+}
+
+/* Positioning the dot for the right side */
+.right::after {
+    left: -25px; /* Adjust this value to position the dot closer to the center */
+}
+
+/* Arrows pointing right (for left container) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--secondaryColor); /* Use variable for color */
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--secondaryColor);
+}
+
+/* Arrows pointing left (for right container) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--secondaryColor); /* Use variable for color */
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--secondaryColor) transparent transparent;
+}
+
+/* Content styling */
+.content {
+    padding: 20px 30px;
+    background-color: var(--previewBg); /* Use variable for color */
+    position: relative;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    /* Shift timeline to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Arrows pointing leftwards */
+    .container::before {
+        left: 60px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--secondaryColor) transparent transparent;
+    }
+
+    /* Align circles */
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+        transform: none; /* Reset the right shift for mobile view */
+    }
+}
