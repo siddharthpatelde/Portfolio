@@ -638,3 +638,50 @@ button {
         transform: none; /* Reset the right shift for mobile view */
     }
 }
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style for the Read More Button */
+.read-more-btn {
+    display: inline-block;
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    transition: background-color 0.3s ease;
+}
+
+/* Additional button styling for alignment */
+.content a {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* Back to Timeline Button */
+.back-to-timeline {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    text-align: center;
+    text-decoration: none;
+}
+
+.back-to-timeline:hover {
+    background-color: #1395a0;
+    opacity: 1;
+}
+
