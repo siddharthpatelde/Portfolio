@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
 	<title>Siddharth Patel</title>
 
-	<link rel="shortcut icon" type="image/x-icon" href=".\images\website_Logo.png">
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/website_Logo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
 
-	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&amp;family=Russo+One&amp;display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="default.css">
-	<link id="theme-style" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/default.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" data-theme-base="./assets/css/">
 </head>
 <body>
 
@@ -26,23 +27,21 @@
 				<div class="nav-wrapper">
 
 					<!-- Link around dots-wrapper added after tutorial video -->
-					<a href="index.html">
-						<div class="dots-wrapper">
-							<div id="dot-1" class="browser-dot"></div>
-							<div id="dot-2" class="browser-dot"></div>
-							<div id="dot-3" class="browser-dot"></div>
-						</div>
+					<a class="dots-link" href="index.html">
+						<span id="dot-1" class="browser-dot"></span>
+						<span id="dot-2" class="browser-dot"></span>
+						<span id="dot-3" class="browser-dot"></span>
 					</a>
 					
 
-					<ul id="navigation">
-						<li><a href="contact.html">Contact</a></li>
+					<ul class="navigation">
+						<li><a href="./pages/contact.html">Contact</a></li>
 
 					</ul>
 				</div>
 
 				<div class="left-column">
-					<img alt="profile_pic" id="profile_pic" src="Profile_2.png">
+					<img alt="Profile portrait of Siddharth Patel" id="profile_pic" src="./assets/images/Profile_2.png">
 					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
 
 					<div id="theme-options-wrapper">
@@ -52,7 +51,7 @@
 						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
 					</div>
 
-					<p id="settings-note">*Theme settings will be saved for<br>your next vist</p>
+					<p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
 				</div>
 
 				<div class="right-column">
@@ -134,42 +133,26 @@
 				</div>
 
 				
-				<div class="social-links">
-					<img id="social_img" src=".\images\github_page.png">
-					<img id="social_img" src=".\images\Robot.gif">
+					<div class="social-links">
+						<img class="social-img" src="./assets/images/github_page.png" alt="GitHub profile preview">
+						<img class="social-img" src="./assets/images/Robot.gif" alt="Animated robot illustration">
 					
 					<h3>Find me on GitHub</h3>
 
 					
-					<a target="_blank" href="https://github.com/siddharthpatelde">GitHub: @siddharthpatelde</a>
+						<a target="_blank" rel="noopener noreferrer" href="https://github.com/siddharthpatelde">GitHub: @siddharthpatelde</a>
 
 
 					
-					<p><button class="button" data-sharer="CV" onclick="downloadCV()">Download CV</button></p>
+						<p><button class="button" data-sharer="CV" type="button" onclick="downloadCV()">Download CV</button></p>
 
-					<script>
-						function downloadCV() {
-							var cvUrl = "./images/CV - Siddharth Patel.pdf";
-							window.open(cvUrl, '_blank');
-						}
-					</script> 
-
-
-					<p><button class="button" data-sharer="CV" onclick="downloadQR()">QR Code</button></p>
-
-					<script>
-						function downloadQR() {
-							var cvUrl = "./images/Website_QR_latex.pdf";
-							window.open(cvUrl, '_blank');
-						}
-					</script>
+						<p><button class="button" data-sharer="CV" type="button" onclick="downloadQR()">QR Code</button></p>
 
 				</div>
 			</div>
 
 		</div>
 	</section>
-</section>
 
 
 
@@ -211,11 +194,11 @@
             <!-- Project Post 1 -->
             <div class="about-me">
                 <div class="post">
-                    <img class="thumbnail" src="./images/Rover_thoumbnail.gif" alt="Rover Thumbnail">
+                    <img class="thumbnail" src="./assets/images/Rover_thoumbnail.gif" alt="Rover Thumbnail">
                     <div class="post-preview">
                         <h6 class="post-title">Rover Prototype</h6>
                         <p class="post-intro">In this post, you'll find my contribution to the project.</p>
-                        <a href="Rover_post.html">Read More</a>
+                        <a href="./pages/rover-post.html">Read More</a>
                     </div>
                 </div>
             </div>
@@ -235,9 +218,9 @@
 
             <!-- Social Links Section -->
             <div class="social-links">
-                <img id="social_img" src="./images/S04_HTW_Berlin_Logo_pos_FARBIG_RGB.jpg" alt="HTW Berlin Logo">
+                <img class="social-img" src="./assets/images/S04_HTW_Berlin_Logo_pos_FARBIG_RGB.jpg" alt="HTW Berlin Logo">
                 <h3>Project Github Page</h3>
-                <a target="_blank" href="https://github.com/siddharthpatelde/ROVER_DRONE_HTW_BERLIN">GitHub: @ROVER_DRONE_HTW_BERLIN</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/siddharthpatelde/ROVER_DRONE_HTW_BERLIN">GitHub: @ROVER_DRONE_HTW_BERLIN</a>
             </div>
         </div>
     </div>
@@ -273,10 +256,10 @@
 
             <!-- Social Links Section -->
             <div class="social-links">
-                <img id="social_img" src="./images/top.png" alt="Top Image">
-                <img id="social_img" src="./images/bottom.jpg" alt="Bottom Image">
+                <img class="social-img" src="./assets/images/top.png" alt="Top classroom image">
+                <img class="social-img" src="./assets/images/bottom.jpg" alt="Bottom classroom image">
                 <h3>Train The Future page</h3>
-                <a target="_blank" href="https://trainthefuture.com/">https://trainthefuture.com/</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://trainthefuture.com/">https://trainthefuture.com/</a>
             </div>
         </div>
     </div>
@@ -287,42 +270,20 @@
     &#8593; <!-- Unicode for an up arrow -->
 </a>
 
-<script>
-    // Function to show the arrow when scrolling into specific sections
-    document.addEventListener('scroll', function() {
-        // Get the back-to-timeline element
-        const backToTimelineButton = document.getElementById('back-to-timeline');
-        
-        // Get the positions of the #train-future and #htw-berlin sections
-        const trainFutureSection = document.getElementById('train-future');
-        const htwBerlinSection = document.getElementById('htw-berlin');
-        
-        const trainFutureTop = trainFutureSection.getBoundingClientRect().top;
-        const htwBerlinTop = htwBerlinSection.getBoundingClientRect().top;
-
-        // Show the back-to-timeline button when scrolling to specific sections
-        if (trainFutureTop < window.innerHeight && trainFutureTop > 0 || htwBerlinTop < window.innerHeight && htwBerlinTop > 0) {
-            backToTimelineButton.style.display = 'block'; // Show the button
-        } else {
-            backToTimelineButton.style.display = 'none'; // Hide the button
-        }
-    });
-</script>
-
 <section id="first_book" class="s2">
     <div class="main-container">
       
-		<h2><center>Intro to Robot Operating System</center></h2>
+		<h2 style="text-align: center;">Intro to Robot Operating System</h2>
 			<!-- About Me Section 1 -->
 			<div id="book-section" class="about-wrapper">
 				<!-- Project Post 1 -->
 				<div class="about-me">
 					<div class="post">
-						<img class="thumbnail" src="./images/book_cover.png" alt="Rover Thumbnail">
+						<img class="thumbnail" src="./assets/images/book_cover.png" alt="Rover Thumbnail">
 						<div class="post-preview">
 							<h6 class="post-title">My Latest Book</h6>
 							<p class="post-intro">This book is not just a guide to robotics, but a work of art. Entirely coded in LaTeX, with more than 6000 lines of LaTeX code, including the book cover design. Additionally, the chapter themes were designed by me, ensuring a unique and professional presentation throughout the book. The LaTeX code for the chapter themes is available upon direct request to the author.</p>
-							<a href="complet_cover.pdf" >View Cover</a>
+							<a href="./assets/documents/complet_cover.pdf" >View Cover</a>
 						</div>
 					</div>
 				</div>
@@ -341,12 +302,12 @@
 
 			<!-- Social Links Section -->
             <div class="social-links">
-                <img id="social_img" src="./images/book_other_cover.png" alt="HTW Berlin Logo">
+                <img class="social-img" src="./assets/images/book_other_cover.png" alt="Alternate book cover">
                 <h3>Explore the Book</h3>
 				<p>
 					Curious to learn more? You can read the table of contents, preface, abstract, and the first chapter. For more details or to request a copy, feel free to contact me.
 				</p>
-                <a target="_blank" href="output_1_to_30.pdf">Read Table of Contents, Preface, Abstract, and First Chapter</a>
+                <a target="_blank" rel="noopener noreferrer" href="./assets/documents/output_1_to_30.pdf">Read Table of Contents, Preface, Abstract, and First Chapter</a>
             </div>
 
         </div>
@@ -356,20 +317,20 @@
 
 <section class="s1">
     <div class="main-container">
-        <h2><center>Prof. Heinrich Aumund Scholarship</center></h2>
+        <h2 style="text-align: center;">Prof. Heinrich Aumund Scholarship</h2>
         
         <!-- Image and Info Block -->
         <div id="aumund-scholarship" class="about-wrapper">
             <div class="about-me">
                 <div class="post">
-                    <img class="thumbnail" src="./images/aumund_certificate.png" alt="Aumund Scholarship Certificate">
+                    <img class="thumbnail" src="./assets/images/aumund_certificate.png" alt="Aumund Scholarship Certificate">
                     <div class="post-preview">
                         <h6 class="post-title">A Step Forward</h6>
                         <p class="post-intro">
-                            Since October 2024, I have been a proud member of the <b1>Prof. Heinrich Aumund Scholarship</b1> program at HTW Berlin.
+                            Since October 2024, I have been a proud member of the <strong>Prof. Heinrich Aumund Scholarship</strong> program at HTW Berlin.
                             This scholarship means more to me than financial support—it represents trust in my potential and my long-term vision.
                         </p>
-                        <a href="./images/certificates/aumund_confirmation.pdf" target="_blank">See Certificate</a>
+                        <a href="./assets/documents/certificates/aumund_confirmation.pdf" target="_blank">See Certificate</a>
                     </div>
                 </div>
             </div>
@@ -398,7 +359,7 @@
 
 				<div>
 					<div class="post">
-						<img alt="Intelligent Camera Platform" class="thumbnail" src="./images/camera_post_2.jpg">
+						<img alt="Intelligent Camera Platform" class="thumbnail" src="./assets/images/camera_post_2.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Intelligent Camera Platform</h6>
 							<p class="post-intro">Developing an autonomous camera tracking system using ROS for object detection and tracking.</p>
@@ -410,7 +371,7 @@
 
 				<div>
 					<div class="post">
-						<img alt="Solar Cell Test Bench" class="thumbnail" src="./images/solar_post.jpg">
+						<img alt="Solar Cell Test Bench" class="thumbnail" src="./assets/images/solar_post.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Solar Cell Test Bench</h6>
 							<p class="post-intro">Developed a test bench to analyze voltage and current behavior of a solar cell under varying temperatures.</p>
@@ -422,7 +383,7 @@
 
 				<div>
 					<div class="post">
-						<img alt="Edge Detection LIDAR" class="thumbnail" src="./images/thumbnail_edge_detection.png">
+						<img alt="Edge Detection LIDAR" class="thumbnail" src="./assets/images/thumbnail_edge_detection.png">
 						<div class="post-preview">
 							<h6 class="post-title">2D LIDAR Edge Detection</h6>
 							<p class="post-intro">Developed a C++ function to calculate the distance to the next edge using a 2D LIDAR sensor and Raspberry Pi Pico.</p>
@@ -434,76 +395,76 @@
 
 				<div>
 					<div class="post">
-						<img alt class="thumbnail" src=".\images\thumbnail_Line-Following_robot.gif">
+						<img alt="Line-following robot project thumbnail" class="thumbnail" src="./assets/images/thumbnail_Line-Following_robot.gif">
 						<div class="post-preview">
 							<h6 class="post-title">Line-Following-Robot</h6>
 							<p class="post-intro">made a simple line-following robot, without using any micro controller.</p>
-							<a href="Line-Following-Robot.html">Read More</a>
+							<a href="./pages/projects/line-following-robot.html">Read More</a>
 						</div>
 					</div>
 				</div>
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\thumbnail_MRP.jpg">
+						<img alt="Mars rover prototype thumbnail" class="thumbnail" src="./assets/images/thumbnail_MRP.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Mars Rover Prototype</h6>
 							<p class="post-intro">I proudly crafted a Mars Rover prototype for college students.</p>
-							<a href="Mars-Rover-Prototype.html">Read More</a>
+							<a href="./pages/projects/mars-rover-prototype.html">Read More</a>
 						</div>
 					</div>
 				</div>
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\tumbnail_RFID.jpg">
+						<img alt="RFID project thumbnail" class="thumbnail" src="./assets/images/tumbnail_RFID.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Radio-Frequency IDentification</h6>
 							<p class="post-intro">designed and implemented an innovative RFID security system for my room door</p>
-							<a href="Radio-Frequency-IDentification.html">Read More</a>
+							<a href="./pages/projects/radio-frequency-identification.html">Read More</a>
 						</div>
 					</div>
 				</div>
 				
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\thoumbnail_OAR.jpg">
+						<img alt="Obstacle avoiding robot thumbnail" class="thumbnail" src="./assets/images/thoumbnail_OAR.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Obstacle Avoiding Robot</h6>
 							<p class="post-intro">Crafting an Obstacle-Avoiding Robot Utilizing Ultrasonic Sensor</p>
-							<a href="Obstacle Avoiding Robot.html">Read More</a>
+							<a href="./pages/projects/obstacle-avoiding-robot.html">Read More</a>
 						</div>
 					</div>
 				</div>
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\thoumbnail_hollowgraph.gif">
+						<img alt="Holographic effect project thumbnail" class="thumbnail" src="./assets/images/thoumbnail_hollowgraph.gif">
 						<div class="post-preview">
 							<h6 class="post-title">Holographic Effect</h6>	
 							<p class="post-intro">Created a delightful holographic project that offers a playful experience to the world of electronics.</p>
-							<a href="work-in-progress.htm">Work-in-progress</a>
+							<a href="./pages/projects/work-in-progress.html">Work-in-progress</a>
 						</div>
 					</div>
 				</div>
 				
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\thumbnail_Blutooth_car.jpg">
+						<img alt="Bluetooth car project thumbnail" class="thumbnail" src="./assets/images/thumbnail_Blutooth_car.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">Bluetooth Car</h6>
 							<p class="post-intro"></p>
-							<a href="work-in-progress.htm">Work-in-progress</a>
+							<a href="./pages/projects/work-in-progress.html">Work-in-progress</a>
 						</div>
 					</div>
 				</div>
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\thoumbnail_taser.gif">
+						<img alt="Taser project thumbnail" class="thumbnail" src="./assets/images/thoumbnail_taser.gif">
 						<div class="post-preview">
 							<h6 class="post-title">Taser</h6>
 							<p class="post-intro"></p>
-							<a href="work-in-progress.htm">Work-in-progress</a>
+							<a href="./pages/projects/work-in-progress.html">Work-in-progress</a>
 						</div>
 					</div>
 				</div>
@@ -521,7 +482,7 @@
 	
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/tcs-logo.png">
+							<img class="thumbnail" src="./assets/images/tcs-logo.png">
 							<div class="post-preview">
 								<h6 class="post-title">Tata Consultancy Services</h6>
 								<p class="post-intro">Systems Engineer - Full time (May 2021 - Nov.2022)</p>
@@ -532,7 +493,7 @@
 	
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/revokarma-logo.jpg">
+							<img class="thumbnail" src="./assets/images/revokarma-logo.jpg">
 							<div class="post-preview">
 								<h6 class="post-title">RevoKARMA Hub Solutions </h6>
 								<p class="post-intro">Software Engineer Intern (May 2018 - June 2018)</p>
@@ -564,14 +525,6 @@
 				<input id="submit-btn" type="submit" value="Send">
 			</form> 
 		</div>--> 
-
-
-
-
-
-
-
-	</section> 
 	<section class="s1">
 		<div class="main-container">
 			<h3 style="text-align: center;">Research Work / Notes</h3>
@@ -580,11 +533,11 @@
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="./images/matlab-logo.jpg">
+						<img class="thumbnail" src="./assets/images/matlab-logo.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">MATLAB Notes By Siddharth Patel</h6>
 							<p class="post-intro">I have taken a MATLAB course and created some handy notes by my self. You can learn the basics by reading these notes while using MATLAB, and I'll keep them up-to-date for you.</p>
-							<a href="./images/MATLAB Notes.pdf" target="_blank">Note Link</a>
+							<a href="./assets/documents/MATLAB Notes.pdf" target="_blank">Note Link</a>
 						</div>
 					</div>
 				</div>
@@ -594,22 +547,22 @@
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="./images/C_language_logo.png">
+						<img class="thumbnail" src="./assets/images/C_language_logo.png">
 						<div class="post-preview">
 							<h6 class="post-title">C language Notes</h6>
 							<p class="post-intro">I started with C language notes before diving into Arduino, and it greatly enhanced my Arduino skills.</p>
-							<a href="./images/C_Language_notes.pdf" target="_blank">Note Link</a>
+							<a href="./assets/documents/C_Language_notes.pdf" target="_blank">Note Link</a>
 						</div>
 					</div>
 				</div>
 				
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="./images/APPLICATION_OF_PID.png">
+						<img class="thumbnail" src="./assets/images/APPLICATION_OF_PID.png">
 						<div class="post-preview">
 							<h6 class="post-title">Study and application of differential drive equations on a differential drive robot.</h6>
 							<p class="post-intro">You must read more to learn further about it.</p>
-							<a href="./images/Application_of_PID_not_finished_no_latex_version.pdf">Read More</a> 
+							<a href="./assets/documents/Application_of_PID_not_finished_no_latex_version.pdf">Read More</a> 
 						</div>
 					</div>
 				</div>
@@ -622,19 +575,19 @@
 
 	<section class="s2">
     <div class="main-container">
-        <h2><center>Martial Arts Achievements</center></h2>
+        <h2 style="text-align: center;">Martial Arts Achievements</h2>
 
         <div id="martial-arts" class="about-wrapper">
             <!-- Visual Block -->
             <div class="about-me">
 				<div class="post">
-                    <img class="thumbnail" src="./images/black_belt_certificate.jpeg" alt="Taekwondo and Belt Wrestling Certificates">
+                    <img class="thumbnail" src="./assets/images/black_belt_certificate.jpeg" alt="Taekwondo and Belt Wrestling Certificates">
                     <div class="post-preview">
-                        <h6 class="post-title">Taekwondo & Belt Wrestling</h6>
+                        <h6 class="post-title">Taekwondo &amp; Belt Wrestling</h6>
                         <p class="post-intro">
                             Outside of my academic and technical work, I have dedicated many years to martial arts. I did Taekwondo for 6 years and have represented my state and school at national-level competitions in Belt Wrestling.
                         </p>
-                        <a href="./images/certificates/belt_wrestling_certificate.pdf" target="_blank">See Certificate</a>
+                        <a href="./assets/documents/certificates/belt_wrestling_certificate.pdf" target="_blank">See Certificate</a>
                     </div>
                 </div>
             </div>
@@ -657,11 +610,6 @@
     </div>
 </section>
 
-
-
-
-
-	</section> 
 	<section class="s2">
 		<div class="main-container">
 			<h3 style="text-align: center;">Certifications</h3>
@@ -670,7 +618,7 @@
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\coursera_logo.png">
+						<img alt="Coursera logo" class="thumbnail" src="./assets/images/coursera_logo.png">
 						<div class="post-preview">
 							<h6 class="post-title">The Arduino Platform and C Programming</h6>
 							<p class="post-intro">an course authorized by University of California, Irvine and offered through Courser</p>
@@ -681,7 +629,7 @@
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\coursera_logo.png">
+						<img alt="Coursera logo" class="thumbnail" src="./assets/images/coursera_logo.png">
 						<div class="post-preview">
 							<h6 class="post-title">Introduction to the Internet of Things and Embedded Systems</h6>
 							<p class="post-intro">an course authorized by University of California, Irvine and offered through Courser</p>
@@ -692,29 +640,29 @@
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\logo_of_NIT_Calicut.svg.png">
+						<img alt="NIT Calicut logo" class="thumbnail" src="./assets/images/logo_of_NIT_Calicut.svg.png">
 						<div class="post-preview">
 							<h6 class="post-title">Mechatronics and Automantion</h6>
 							<p class="post-intro">a webinar on Mechatronics and Automantion by IEEE NITC SB</p>
-							<a href=".\images\Certificate for Siddharth Patel[501].pdf" target="_blank">Certification Link</a>
+							<a href="./assets/documents/Certificate for Siddharth Patel[501].pdf" target="_blank" rel="noopener noreferrer">Certification Link</a>
 						</div>
 					</div>
 				</div>
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src=".\images\telc_logo.png">
+						<img alt="telc logo" class="thumbnail" src="./assets/images/telc_logo.png">
 						<div class="post-preview">
 							<h6 class="post-title">German language (level C1)</h6>
 							<p class="post-intro">telc Deutsch C1 Hochschule Council of Europe level C1</p>
-							<a href=".\images\Zert telc Deutsch C1 HS_SA Patel.pdf" target="_blank">Certification Link</a>
+							<a href="./assets/documents/Zert telc Deutsch C1 HS_SA Patel.pdf" target="_blank" rel="noopener noreferrer">Certification Link</a>
 						</div>
 					</div>
 				</div>
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="./images/ros-course.png" alt="ROS Udemy Course Thumbnail">
+						<img class="thumbnail" src="./assets/images/ros-course.png" alt="ROS Udemy Course Thumbnail">
 						<div class="post-preview">
 							<h6 class="post-title">ROS (Robot Operating System) Course</h6>
 							<p class="post-intro">
@@ -730,7 +678,7 @@
 
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="./images/latex-750x300.jpg">
+						<img class="thumbnail" src="./assets/images/latex-750x300.jpg">
 						<div class="post-preview">
 							<h6 class="post-title">LaTex</h6>
 							<p class="post-intro">I took a quick course on LaTeX, as I thought it was a good habit to write each scientific literature in LaTeX right from the first semester. This way, as I progress in my journey towards higher education in the research field, it will benefit me.</p>
@@ -741,11 +689,11 @@
 			
 				<div>
 					<div class="post">
-						<img alt class="thumbnail" src="./images/certificate_logo.png">
+						<img alt="Certificate icon" class="thumbnail" src="./assets/images/certificate_logo.png">
 						<div class="post-preview">
 							<h6 class="post-title">Abiturzeugnis</h6>
 							<p class="post-intro">mein FSP (deutsches Abitur) zusammen mit meinem Deutschzertifikat und meinem TestAS</p>
-							<a href="./images/FSP_C1_TestAS.pdf" target="_blank">Certification Link</a>
+							<a href="./assets/documents/FSP_C1_TestAS.pdf" target="_blank">Certification Link</a>
 						</div>
 					</div>
 				</div>
@@ -757,10 +705,9 @@
 			</div>
 		</div>
 		<div class="greeting-wrapper">
-			<h4><ul id="navigation">
-				<li><a href="contact.html">Contact</a></li>
-
-			</ul></h4>
+			<ul class="navigation">
+				<li><a href="./pages/contact.html">Contact</a></li>
+			</ul>
 		</div>
 	</section>
 	<section class="s1">
@@ -788,8 +735,8 @@
 
 
 
-	<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 	<!--<script>
 		function sendEmail(){
@@ -805,6 +752,6 @@ Body : "And this is the body"
 message => alert(message)
 );}</script> -->
 
-	<script type="text/javascript" src="script.js"></script>
-</body>
+		<script type="text/javascript" src="./assets/js/script.js"></script>
+	</body>
 </html>

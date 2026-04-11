@@ -116,25 +116,30 @@ h6 { font-size: 16px;}
 	background-color: var(--mainColor);
 }
 
-#navigation a{
+.navigation a{
 	color:var(--mainText);
 }
 
 
-#navigation{
+.navigation{
 	margin:0;
 	padding: 10px;
 }
 
-#navigation li{
+.navigation li{
 	display: inline-block;
 	margin-right: 5px;
 	margin-left:5px;
 }
 
-.dots-wrapper{
+.dots-wrapper,
+.dots-link{
 	display: flex;
 	padding: 10px;
+}
+
+.dots-link{
+	align-items: center;
 }
 
 #dot-1{
@@ -316,7 +321,7 @@ h6 { font-size: 16px;}
 	text-align: center;
 }
 
-#social_img{
+.social-img{
 	width: 100%;
 }
 
@@ -684,4 +689,3 @@ html {
     background-color: #1395a0;
     opacity: 1;
 }
-
