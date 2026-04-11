@@ -12,16 +12,16 @@
 
 	<link rel="stylesheet" type="text/css" href="../assets/css/default.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" data-theme-base="../assets/css/">
-	<link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
 
 </head>
 <body>
-    <section class="s1">
+    <section class="s1 contact-page">
         <div class="main-container">
             <div class="greeting-wrapper">
 				<h1>Get In Touch</h1>
+				<p>Reach out for collaborations, research discussions, teaching opportunities, or project work.</p>
 			</div>
-            <div class="intro-wrapper">
+            <div class="intro-wrapper contact-hero">
                 <div class="nav-wrapper">
     
                     <!-- Link around dots-wrapper added after tutorial video -->
@@ -39,114 +39,114 @@
                     </ul>
                 </div>
     
-                <div class="main-container">
-    
-                    <div class="main-container">
-    
-                        <a href=""></a>
-                        <!--<h3 style="text-align: center;">Get In Touch</h3>-->
-            
-                    <form method="post">
-            
-                        <a name="contact"></a>
-            
-                            <label>Name</label>
-                            <input id="name" class="input-field" type="text" name="name">
-            
-                            <label>Subject</label>
-                            <input id="subject" class="input-field" type="text" name="subject">
-            
-                            <label>Email</label>
-                            <input id="email" class="input-field" type="text" name="email">
-            
-                            <label>Message</label>
-                            <textarea id="message" class="input-field" name="message"></textarea>
-            
-                            <input id="submit-btn" type="submit" value="Send">
-            
-                    </form>
-                    </div>
-                    
-                    <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
-    
-                    <div id="theme-options-wrapper">
-                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
-                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
-                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-                    </div>
-    
-                    <p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
+                <div class="left-column contact-form-column">
+					<div class="contact-panel">
+						<div class="contact-panel-header">
+							<h3>Send a Message</h3>
+							<p>Use the form below and your email app will open with everything prepared.</p>
+						</div>
+
+						<form id="contact-form-simple">
+							<a name="contact"></a>
+
+							<label for="name">Name</label>
+							<input id="name" class="input-field" type="text" name="name" placeholder="Your name" required>
+
+							<label for="subject">Subject</label>
+							<input id="subject" class="input-field" type="text" name="subject" placeholder="What would you like to discuss?" required>
+
+							<label for="email">Email</label>
+							<input id="email" class="input-field" type="email" name="email" placeholder="your@email.com" required>
+
+							<label for="message">Message</label>
+							<textarea id="message" class="input-field" name="message" placeholder="Write your message here..." required></textarea>
+
+							<div class="form-actions">
+								<input id="submit-btn" type="submit" value="Send Message">
+								<button id="clear-form-btn" type="button" class="secondary-button">Clear Form</button>
+							</div>
+
+							<p class="contact-note">This opens your email app and prepares a message to siddharthanghan@gmail.com. If no mail app is installed, use the direct email link in the panel on the right.</p>
+						</form>
+					</div>
                 </div>
-    
-                <div class="right-column">
-                    
+
+                <div class="right-column contact-info-column">
+					<div class="contact-side-card">
+						<h3>Contact Details</h3>
+						<p>The fastest direct way to reach me is by email.</p>
+						<a class="contact-email-link" href="mailto:siddharthanghan@gmail.com">siddharthanghan@gmail.com</a>
+						<p class="contact-note">You can also use the form and send a pre-filled message from your default mail app.</p>
+					</div>
+
+					<div class="contact-side-card">
+						<h5 style="text-align: center;line-height: 1.2;">Personalize Theme</h5>
+
+						<div id="theme-options-wrapper">
+							<div data-mode="light" id="light-mode" class="theme-dot"></div>
+							<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+							<div data-mode="green" id="green-mode" class="theme-dot"></div>
+							<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+						</div>
+
+						<p id="settings-note">Theme settings will be saved for your next visit.</p>
+					</div>
                 </div>
             </div>
         </div>
     </section>
 
-	<section class="s2">
-		
+	<section class="s2 contact-share-section">
+		<div class="main-container">
 		<h3 style="text-align: center;">Share my website</h3>
 
-		<div class="post-wrapper">
+		<div class="share-grid">
 
-			<div>
+			<div class="share-card">
 				<button class="button" data-sharer="email" data-title="Siddharth's Portfolio: " data-url="https://siddharthpatelde.github.io/Portfolio/" data-subject="Sharing Siddharth's Portfolio" data-to="someone@xyz.com">Share via Email</button>
 			</div>
 
-			<div>
+			<div class="share-card">
 				<button class="button" data-sharer="whatsapp" data-title="Checkout Siddharths Portfolio" data-url="https://siddharthpatelde.github.io/Portfolio/">Share on Whatsapp</button>
 		    </div>
 
-			<div>
+			<div class="share-card">
 				<button class="button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/">Share on Linkedin</button>
 		    </div>
 
+		</div>
 		</div>
 	</section>
 	
 
 	<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+	<script>
+		const contactForm = document.getElementById('contact-form-simple');
+		const clearFormButton = document.getElementById('clear-form-btn');
 
-    
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script> 
-        var submit = document.getElementById('submit-btn')
-        submit.addEventListener('click',function(e) {
-            e.preventDefault()
-            var name = document.getElementById('name').value;  
-            var email = document.getElementById('email').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-            var body = 'name: ' +name + '<br/> email: ' + email +'<br/> subject: ' + subject +'<br/> message: ' + message;
-            Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "website.inquiry.not.spam@gmail.com",
-    Password : "EDC6FEFBB8859093FA241A94A3C90A828FF1",
-    To : 'siddharthanghan@gmail.com',
-    From :'website.inquiry.not.spam@gmail.com',
-    Subject : subject,
-    Body : body
-}).then(
-  message => alert(message)
-);
-        })
-        </script>
+		contactForm.addEventListener('submit', function (event) {
+			event.preventDefault();
+
+			const name = document.getElementById('name').value.trim();
+			const subject = document.getElementById('subject').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const message = document.getElementById('message').value.trim();
+
+			const mailSubject = encodeURIComponent(subject || 'Portfolio contact');
+			const mailBody = encodeURIComponent(
+				'Name: ' + name + '\n' +
+				'Email: ' + email + '\n\n' +
+				'Message:\n' + message
+			);
+
+			window.location.href = 'mailto:siddharthanghan@gmail.com?subject=' + mailSubject + '&body=' + mailBody;
+		});
+
+		clearFormButton.addEventListener('click', function () {
+			contactForm.reset();
+		});
+	</script>
     <script type="text/javascript" src="../assets/js/script.js"></script>
 
 </body>
 </html>
-
-<!--Host : "smtp.gmail.com",
-    Username : "siddharthanghan@gmail.com",
-    Password : "nfenppthhzfgoqbv",
-    To : 'siddharthanghan@gmail.com',
-    From : email,
-    Subject : subject,
-    Body : body
-website@gmail 5E11F5637FE8192484871488F30B62A05488
-siddharth@gmail 
--->

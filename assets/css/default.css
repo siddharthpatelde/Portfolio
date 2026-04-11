@@ -721,6 +721,108 @@ button:hover,
 	color:#ffffff;
 }
 
+.contact-page .greeting-wrapper{
+	margin-bottom:2.5rem;
+}
+
+.contact-page .greeting-wrapper p{
+	max-width:44rem;
+	margin:0;
+	font-size:1.02rem;
+}
+
+.contact-hero{
+	grid-template-columns:minmax(0, 1.4fr) minmax(280px, 0.9fr);
+}
+
+.contact-form-column,
+.contact-info-column{
+	padding:2rem;
+}
+
+.contact-panel,
+.contact-side-card{
+	display:grid;
+	gap:1rem;
+	padding:1.6rem;
+	border:1px solid rgba(15, 23, 42, 0.08);
+	border-radius:24px;
+	background:var(--secondaryColor);
+	box-shadow:0 18px 36px rgba(15, 23, 42, 0.08);
+}
+
+.contact-panel{
+	gap:1.25rem;
+}
+
+.contact-panel-header p,
+.contact-side-card p,
+.contact-note{
+	margin:0;
+	font-size:0.95rem;
+	line-height:1.7;
+}
+
+.contact-info-column{
+	display:grid;
+	align-content:start;
+	gap:1rem;
+}
+
+.contact-email-link{
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	width:max-content;
+	padding:0.75rem 1rem;
+	border-radius:999px;
+	background:rgba(23, 162, 184, 0.12);
+	color:#0f8aa0;
+	font-weight:700;
+}
+
+.contact-email-link:hover{
+	background:rgba(23, 162, 184, 0.18);
+	color:#0a6576;
+}
+
+.form-actions{
+	display:grid;
+	grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+	gap:0.9rem;
+	margin-top:0.25rem;
+}
+
+.secondary-button{
+	background:transparent;
+	color:var(--mainText);
+	border:1px solid rgba(15, 23, 42, 0.14);
+	box-shadow:none;
+}
+
+.secondary-button:hover{
+	background:rgba(15, 23, 42, 0.05);
+	box-shadow:none;
+}
+
+.contact-share-section .main-container > h3{
+	margin-bottom:1.5rem;
+}
+
+.share-grid{
+	display:grid;
+	grid-template-columns:repeat(3, minmax(0, 1fr));
+	gap:1rem;
+}
+
+.share-card{
+	display:flex;
+}
+
+.share-card button{
+	height:100%;
+}
+
 .img-container{
 	overflow:hidden;
 	border-radius:22px;
@@ -788,6 +890,10 @@ section > .main-container > h3::after{
 		left:14px;
 		right:auto;
 	}
+
+	.contact-hero{
+		grid-template-columns:1fr;
+	}
 }
 
 @media screen and (max-width: 720px){
@@ -815,6 +921,11 @@ section > .main-container > h3::after{
 		padding:1.5rem;
 	}
 
+	.contact-form-column,
+	.contact-info-column{
+		padding:1.25rem;
+	}
+
 	#profile_pic{
 		width:180px;
 		height:180px;
@@ -831,6 +942,11 @@ section > .main-container > h3::after{
 
 	.post-preview{
 		padding:1.1rem 1.1rem 1.25rem;
+	}
+
+	.form-actions,
+	.share-grid{
+		grid-template-columns:1fr;
 	}
 
 	.back-to-timeline{
